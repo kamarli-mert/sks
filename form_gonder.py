@@ -127,7 +127,8 @@ try:
             telefon_input = driver.find_element(By.CSS_SELECTOR, "input[placeholder='Telefon']")
             telefon_input.clear()
             # excel dosyasındaki telefon numarası aldığınız sütünün ismini phoneNumber yapın lütfen
-            telefon_input.send_keys(str(row['phoneNumber']))
+            telefon = str(row['phoneNumber']).replace(" ", "").replace("-", "")
+            telefon_input.send_keys(telefon)
             
             # E-posta ("E-posta")
             eposta_input = driver.find_element(By.CSS_SELECTOR, "input[placeholder='E-posta']")
