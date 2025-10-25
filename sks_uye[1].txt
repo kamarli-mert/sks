@@ -1,0 +1,28 @@
+Excel Form Gönderme Scripti - Kullanım Kılavuzu
+
+1- Requirements Kurma indirilcek komut satırından
+pip install pandas openpyxl selenium webdriver-manager
+
+2- Kodu Kendinize Göre Düzenleyin
+form_gonder.py dosyasında aşağıdaki ayarları yapın:
+•  Satır 45: Excel dosya adınızı yazın
+excel_file = "Üye Formu.xlsx"  # Kendi dosyanızın adını yazın
+
+•  Satır 103: Topluluk sıranızı sondan hesaplayarak yazın
+secilecek_index = len(options) - 3  # -3, -4, -5 vb. değiştirin
+
+•Excel sütun isimleri şunlar olmalı:
+◦  fullName (İsim Soyisim)
+◦  department (Fakülte/Bölüm)
+◦  studentNumber (Öğrenci No)
+◦  phoneNumber (Telefon)
+◦  studentEmail (E-posta)
+
+3- Kodu Çalıştırma
+python form_gonder.py
+
+Notlar:
+•  Script çalışırken Chrome tarayıcısı otomatik açılacak
+•  Her kayıt gönderildikçe ekranda bilgi görünecek
+•  Hata olursa otomatik devam eder
+•  Yarıda kalırsa START_FROM değişkenini (Satır 41) değiştirip kaldığınız yerden devam edebilirsiniz
