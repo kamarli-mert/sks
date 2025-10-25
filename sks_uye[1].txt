@@ -9,7 +9,8 @@ form_gonder.py dosyasında aşağıdaki ayarları yapın:
 excel_file = "Üye Formu.xlsx"  # Kendi dosyanızın adını yazın
 
 •  Satır 103: Topluluk sıranızı sondan hesaplayarak yazın
-secilecek_index = len(options) - 3  # -3, -4, -5 vb. değiştirin
+secilecek_index = len(options) - 3 
+topluluğunuz sırasını sondan hesaplayarak buraya yazın. baştan hesaplamak isterseniz "len(options) - 3" ifadesi yerine direk olarak kulübünüzün sırasından 1 çıkararak yazabilirsiniz. örneğin kulübünüz baştan 15. sırada ise 14 yazınız.
 
 •Excel sütun isimleri şunlar olmalı:
 ◦  fullName (İsim Soyisim)
